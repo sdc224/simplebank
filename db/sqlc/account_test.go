@@ -70,7 +70,7 @@ func TestUpdateAccount(t *testing.T) {
 	require.WithinDuration(t, account2.CreatedAt, account1.CreatedAt, time.Second)
 }
 
-func TestDelete(t *testing.T) {
+func TestDeleteAccount(t *testing.T) {
 	account := CreateAccountUtil(t)
 
 	err := testQueries.DeleteAccount(context.Background(), account.ID)
